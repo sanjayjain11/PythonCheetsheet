@@ -111,7 +111,32 @@ d.extend([1,2,3])    # Extend right
 d.extendleft([1,2,3])# Extend left
 d.rotate(n)          # Rotate n steps right (negative for left)
 ```
+## Stack
 
+```python
+from collections import deque
+
+stack = deque()  # Create an empty deque (stack)
+
+stack.append(1)  # Push 1 onto the stack
+stack.append(2)  # Push 2 onto the stack
+stack.append(3)  # Push 3 onto the stack
+print(stack)      # Output: deque([1, 2, 3])
+
+top = stack[-1]   # Peek (access last element) - Output: 3
+print(top)
+
+popped = stack.pop()  # Pop (remove and return last element) - Output: 3
+print(popped)
+print(stack)      # Output: deque([1, 2])
+
+is_empty = not stack  # Check if stack is empty - Output: False
+print(is_empty)
+
+stack.clear()   # Clear the stack
+is_empty = not stack  # Check if stack is empty again - Output: True
+print(is_empty)
+```
 ## Heapq
 
 ```python
